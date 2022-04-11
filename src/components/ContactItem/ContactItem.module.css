@@ -1,0 +1,54 @@
+.container {
+    height: 100px;
+    display: grid;
+    border-bottom: 1px solid #667e9e54;
+    padding: 10px;
+    grid-template-columns: 5fr 1fr;
+    cursor: pointer;
+}
+.name {
+    padding: 5px;
+    color: grey;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.email {
+    padding: 5px;
+    color: grey;
+}
+.name, .email {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 550px;
+}
+.deleteButton {
+    align-self: center;
+    justify-self: center;
+    height: 35px;
+    width: 100%;
+
+}
+.buttons {
+    display: grid;
+}
+.buttons * {
+    width: 100%;
+}
+.selectedContainer {
+    height: 100px;
+    display: grid;
+    background-color: rgba(49, 162, 255, 0.055);
+    border-left: 5px solid rgba(0, 140, 255, 0.73);
+    border-bottom: 1px solid #667e9e54;
+    padding: 10px 10px 10px 5px;
+    grid-template-columns: 5fr 1fr;
+    cursor: pointer;
+    
+}
+.container .buttons {
+    display: none;
+}
+.selectedContainer .name, .selectedContainer .email {
+    color: #18191b;
+}

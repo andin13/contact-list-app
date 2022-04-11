@@ -1,0 +1,14 @@
+.label {
+    color: gray;
+    padding: 5px;
+    font-size: 15px;
+}
+.item {
+    font-size: 25px;
+    padding: 5px;
+    border-bottom: 1px solid #475466;
+    word-break: break-all;
+}
+.editButton {
+    padding-top: 30px;
+}

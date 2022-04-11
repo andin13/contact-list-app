@@ -1,0 +1,42 @@
+.container {
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 70px 1fr;
+    grid-template-areas:
+    "header header header header header"
+    "contacts contacts contacts contactItem contactItem"
+}
+.header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 5fr 1fr 1fr;
+    background-color: #475466;
+    align-content: center;
+    padding: 0 50px 0 50px;
+}
+
+.contacts {
+    display: grid;
+    grid-area: contacts;
+    background-color: #EBEDF0;
+    overflow-y:scroll;
+    padding: 50px;
+}
+.contactItem {
+    display: grid;
+    padding: 50px;
+    grid-area: contactItem;
+    background-color: #FFFFFF;
+    overflow-y:scroll;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 140, 255, 0.73);
+    border-radius: 5px;
+}

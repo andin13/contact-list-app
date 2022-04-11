@@ -1,3 +1,17 @@
+# For properly work you need to use JSON Server
+
+Clon it from [GitHub](https://github.com/techiediaries/fake-api-jwt-json-server).
+After that you have to open file database.json and replace it's content with following code:
+```json
+{
+  "contacts": []
+}
+```
+
+Now start server with following command: "npm run start-auth".
+
+Now you can start this application as usual CRA.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

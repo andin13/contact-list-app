@@ -1,0 +1,22 @@
+.title {
+    display: flex;
+    justify-self: center;
+}
+.form {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.formContent {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.buttons {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    justify-content: space-around;
+}

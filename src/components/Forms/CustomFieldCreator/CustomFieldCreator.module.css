@@ -1,0 +1,11 @@
+.field {
+    width: 90%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px
+}
+
+.error {
+    color: red;
+}

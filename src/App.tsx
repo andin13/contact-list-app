@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { useTypedSelector } from 'hooks/useTypedSelector';
+import { Modal } from 'antd';
+import Contacts from './components/Contacts/Contacts';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+import { useActions } from './hooks/useActions';
 
-function App() {
+function App(): JSX.Element {
+  const { initialize } = useActions();
+  const { setError } = useActions();
+  const { error } = useTypedSelector((state) => state.app);
+  useEffect(() => {
+    const token = localStorage.getItem('AuthToken');
+    if (token) {
+      initialize(token);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (error) {
+      const modal = Modal.error({
+        title: 'Error!',
+        content: error,
+        onOk: () => setError(''),
+      });
+      return () => {
+        modal.destroy();
+      };
+    } return undefined;
+  }, [error, setError]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/" element={<Navigate to="/login" />} />
+      </Routes>
+
     </div>
   );
 }
