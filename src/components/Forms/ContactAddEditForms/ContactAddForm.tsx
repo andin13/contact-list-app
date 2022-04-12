@@ -37,7 +37,6 @@ function ContactAddForm(): JSX.Element {
   const handleOk = () => {
     setConfirmLoading(true);
     handleSubmit();
-    setVisible(false);
     setConfirmLoading(false);
   };
 
@@ -62,6 +61,7 @@ function ContactAddForm(): JSX.Element {
           initialValues={initialValues}
           validate={(values) => validator(values)}
           onSubmit={(values, actions) => {
+            setVisible(false);
             addContactThunk({ ...values }, token);
             actions.resetForm();
             actions.setSubmitting(false);
