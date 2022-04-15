@@ -4,7 +4,17 @@ For properly work you need to use JSON Server.
 
 Clon this server from [GitHub(it is link)](https://github.com/andin13/contact-list-app-server) (follow the link to github).
 
-Now start server with following command: "npm run start-auth".
+Install it:
+
+```bash
+$ npm install
+```
+
+Now start server with following command:
+
+```bash
+$ npm run start-auth
+```
 
 Now you can start this application as usual CRA.
 
