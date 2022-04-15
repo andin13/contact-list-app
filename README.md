@@ -1,12 +1,8 @@
 # For properly work you need to use JSON Server
 
-Clon it from [GitHub](https://github.com/techiediaries/fake-api-jwt-json-server).
-After that you have to open file database.json and replace it's content with following code:
-```json
-{
-  "contacts": []
-}
-```
+For properly work you need to use JSON Server.
+
+Clon this server from [GitHub(it is link)](https://github.com/andin13/contact-list-app-server) (follow the link to github).
 
 Now start server with following command: "npm run start-auth".
 

@@ -38,7 +38,6 @@ function ContactEditForm({ contact }:ContactEditFormProps): JSX.Element {
   const handleOk = () => {
     setConfirmLoading(true);
     handleSubmit();
-    setVisible(false);
     setConfirmLoading(false);
   };
 
@@ -65,6 +64,7 @@ function ContactEditForm({ contact }:ContactEditFormProps): JSX.Element {
             initialValues={initialValues}
             validate={(values) => validator(values)}
             onSubmit={(values, actions) => {
+              setVisible(false);
               editContactThunk(contact.id, { ...values }, token);
               actions.setSubmitting(false);
             }}
